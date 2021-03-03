@@ -1,45 +1,14 @@
 //TEMPLATES
-
-const P1 = { template:`
-
-	<h1>Prueba router P1</h1>
-	`
-
-}
-
-const P2 = {template: `
-	<h1>Prueba router P2</h1>
-	`
-}
-
-
-
-
- //------------------------------------------------------------------------------------------------------
- //VUEX STORE
-
-const store = new Vuex.Store({
-            state:{
-                
- 
-
-              },
-            mutations:{
-              
-                
-            },
-            actions:{
-                              
-            }
-
-        }); 
+import {Login,Registro} from './templates/registro.js'
+//STORE
+import {store} from './metodos/store.js'
 
  //------------------------------------------------------------------------------------------------------
  //ROUTER  
 
     const routes = [
-    { path: '/p1', component: P1 },
-    { path: '/p2', component: P2 }
+    { path: '/login', component: Login },
+    { path: '/registro', component: Registro }
     ]
 
     const router = new VueRouter({
@@ -55,4 +24,4 @@ const app = new Vue({
     store: store,
 });
 
-router.push('/p1');
+router.push('/login');
