@@ -1,5 +1,6 @@
  //------------------------------------------------------------------------------------------------------
  //VUEX STORE
+import {prueba} from './prueba.js'
 
 const store = new Vuex.Store({
             state:{
@@ -8,10 +9,7 @@ const store = new Vuex.Store({
 
               },
             mutations:{
-            	prueba(){
-            		console.log("Funciona la comunicacion")
-            	}
-
+            	prueba
               
                 
             },
