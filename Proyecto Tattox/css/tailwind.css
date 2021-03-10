@@ -189331,3 +189331,7 @@ ecxample here:
             animation: bounce 1s infinite;
   }
 }
+
+a{
+  cursor: pointer;
+}
