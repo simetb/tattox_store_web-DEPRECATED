@@ -1,3 +1,4 @@
+//Template del registro
 const Registro = {template: `
 	<div>
   <!-- HEADER + NAVBAR -->
@@ -12,7 +13,7 @@ const Registro = {template: `
         <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">PORTFOLIOS</p>
         <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">ARTISTS</p>
       </div>
-      <a href="./home.html" id="logo" class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 mx-auto cursor-pointer bg-contain bg-no-repeat bg-center bg-logo"></a>
+      <a @click="Ahome"  id="logo" class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 mx-auto cursor-pointer bg-contain bg-no-repeat bg-center bg-logo"></a>
       <div class="hidden mx-auto w-96 lg:flex justify-around pr-32 content-center">
         <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SHOP</p>
         <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">CONTACT US</p>
@@ -55,23 +56,24 @@ const Registro = {template: `
         </button>
         <div class="flex flex-col items-start w-72">
           <label for="email">Email:</label>
-          <input type="email" name="email" id="" class="w-72 p-1 text-myPalette-300" placeholder="example@mail.com">
+          <input type="email" name="email" id="email" class="w-72 p-1 text-myPalette-300" placeholder="example@mail.com">
         </div>
         <div class="flex flex-col items-start w-72 my-2">
           <label for="email">Password:</label>
-          <input type="password" name="email" id="" class="w-72 p-1 text-myPalette-300" placeholder="••••••••">
+          <input type="password" name="email" id="pass" class="w-72 p-1 text-myPalette-300" placeholder="••••••••">
         </div>
         <div class="flex flex-col items-start w-72 mb-4">
           <label for="email">Confirm Password:</label>
-          <input type="password" name="email" id="" class="w-72 p-1 text-myPalette-300" placeholder="••••••••">
+          <input type="password" name="email" id="pass2" class="w-72 p-1 text-myPalette-300" placeholder="••••••••">
         </div>
-        <input type="button" value="Sign in" class="hover:text-myPalette-100 bg-myPalette-100 hover:bg-myPalette-400 w-72 cursor-pointer text-xl font-semibold py-2">
+        <input type="button"  @click="registro_conexion" value="Sign in" class="hover:text-myPalette-100 bg-myPalette-100 hover:bg-myPalette-400 w-72 cursor-pointer text-xl font-semibold py-2">
         <p>Do you have an account?</p>
         <a href="./log_in.html" class="font-bold mb-2">Log in</a>
         <p class="text-xs">By joining to Art TATTOO Studio, you agree to our Terms and Services</p>
       </div>
     </div>
   </div>
+
   <!-- FOOTER -->
   <div class="bg-myPalette-300 h-auto lg:h-screen flex flex-col">
     <div class="container mx-auto flex-grow flex flex-wrap justify-around text-myPalette-400">
@@ -132,7 +134,12 @@ const Registro = {template: `
     </div>
   </div>
   </div>  
-	`
+	`,methods:{
+    ...Vuex.mapMutations(['registro_conexion']),
+    ...Vuex.mapMutations(['Ahome']),
+    ...Vuex.mapMutations(['Alogin']),
+    ...Vuex.mapMutations(['Aregistro'])
+  }
 }
 
 export {Registro}

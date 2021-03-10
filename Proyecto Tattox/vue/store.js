@@ -1,15 +1,24 @@
  //------------------------------------------------------------------------------------------------------
  //VUEX STORE
-import {prueba} from './metodos/prueba.js'
+import {Alogin,Ahome,Aregistro} from './metodos/redireccion.js'
+import {registro_conexion} from './metodos/registro.js'
+import {verifyLogin} from './metodos/login.js'
+
 
 const store = new Vuex.Store({
             state:{
                 
- 
+
 
               },
             mutations:{
-            	prueba,
+            	
+            	registro_conexion,
+            	verifyLogin,
+            	Alogin,
+            	Ahome,
+            	Aregistro
+            	
               
                 
             },

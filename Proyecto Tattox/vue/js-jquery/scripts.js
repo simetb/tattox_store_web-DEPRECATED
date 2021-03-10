@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+const FuncionesHeader = $(document).ready(function() {
     
     /*Not animated function
     const button = document.getElementById("burger").addEventListener('click', () => {
@@ -36,3 +36,4 @@ $(document).ready(function() {
 })
 
 
+export{FuncionesHeader}
