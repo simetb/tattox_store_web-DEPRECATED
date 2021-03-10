@@ -1,14 +1,36 @@
 //TEMPLATES
-import {Login,Registro} from './templates/registro.js'
+import {Registro} from './templates/registro.js'
+import {Login} from './templates/login.js'
 //STORE
-import {store} from './metodos/store.js'
+import {store} from './store.js'
 
+//EJEMPLO DE ADAPTACION 
+const Prueba = {template: `
+	<div>
+		<i class="fa fa-plus icon-to-change"></i>
+		<button  @click="a">Change icon</button>
+	</div>
+	`,methods:{
+		a(){
+			var ele = $('.icon-to-change');
+			if(ele.hasClass('fa-plus')){
+				ele.removeClass('fa-plus').addClass('fa-minus')     
+		  }
+		  else{
+		  		ele.addClass('fa-plus').removeClass('fa-minus')
+		       
+		  }
+			
+		}
+	}
+}
  //------------------------------------------------------------------------------------------------------
  //ROUTER  
 
     const routes = [
     { path: '/login', component: Login },
-    { path: '/registro', component: Registro }
+    { path: '/registro', component: Registro },
+    { path: '/jquery', component: Prueba}
     ]
 
     const router = new VueRouter({
@@ -24,4 +46,4 @@ const app = new Vue({
     store: store,
 });
 
-router.push('/login');
+router.push('/registro');
