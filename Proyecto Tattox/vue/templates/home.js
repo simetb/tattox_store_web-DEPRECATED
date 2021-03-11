@@ -8,15 +8,14 @@ const Home = {template:`
     <div class="ml-5 w-12 ">
         <i id="burger" @click="menu" class="fas fa-bars hover:text-myPalette-100 cursor-pointer text-2xl block lg:hidden nav-toggler"  data-target="#menu"></i>
     </div>
-    <div class="hidden mx-auto w-96 lg:flex justify-around content-center">
-        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SERVICES</p>
-        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">PORTFOLIOS</p>
+    <div class="hidden mx-auto w-96 lg:flex justify-around content-center">   
+        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">APPOINTMENT</p>
         <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">ARTISTS</p>
     </div>
     <a @click="Ahome" @mouseover="logo" id="logo" class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 mx-auto cursor-pointer bg-contain bg-no-repeat bg-center bg-logo"></a>
     <div class="hidden mx-auto w-96 lg:flex justify-around pr-32 content-center">
         <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SHOP</p>
-        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">CONTACT US</p>
+         <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SERVICES</p>
     </div>
     <div class="flex flex-row-reverse mr-5">
         <img src="" alt="" class="bg-myPalette-400 w-12 h-12 rounded-full">
@@ -28,7 +27,7 @@ const Home = {template:`
             SERVICES
         </a>
         <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
-            PORTFOLIOS
+            APPOINTMENT
         </a>
         <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
             ARTISTS
@@ -37,8 +36,9 @@ const Home = {template:`
             SHOP
         </a>
         <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
-            CONTACT US
+            SERVICES
         </a>
+
     </div>
     </div>
     <!-- NAVBAR CLOSE -->

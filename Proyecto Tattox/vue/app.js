@@ -11,6 +11,6 @@ const app = new Vue({
     store: store,
 });
 
-router.push('/login');
+router.push('/registro');
 
 

@@ -9,14 +9,13 @@ const Registro = {template: `
         <i id="burger" @click="menu" class="fas fa-bars hover:text-myPalette-100 cursor-pointer text-2xl block lg:hidden nav-toggler"  data-target="#menu"></i>
       </div>
       <div class="hidden mx-auto w-96 lg:flex justify-around content-center">
-        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SERVICES</p>
-        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">PORTFOLIOS</p>
+        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">APPOINTMENT</p>
         <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">ARTISTS</p>
       </div>
       <a @click="Ahome" @mouseover="logo"  id="logo" class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 mx-auto cursor-pointer bg-contain bg-no-repeat bg-center bg-logo"></a>
       <div class="hidden mx-auto w-96 lg:flex justify-around pr-32 content-center">
         <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SHOP</p>
-        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">CONTACT US</p>
+         <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SERVICES</p>
       </div>
       <div class="flex flex-row-reverse mr-5">
         <img src="" alt="" class="bg-myPalette-400 w-12 h-12 rounded-full">
@@ -25,10 +24,7 @@ const Registro = {template: `
     <div id="menu" class="hidden w-full flex-grow top-20 md:top-24 fixed">
       <div class="w-full text-center divide-y-2 font-semibold">
           <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
-            SERVICES
-          </a>
-          <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
-            PORTFOLIOS
+            APPOINTMENT
           </a>
           <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
             ARTISTS
@@ -37,7 +33,7 @@ const Registro = {template: `
             SHOP
           </a>
           <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
-            CONTACT US
+            SERVICES
           </a>
       </div>
     </div>
@@ -48,11 +44,11 @@ const Registro = {template: `
         <p class="text-3xl md:4xl font-bold">SIGN IN</p>
         <button class="hover:text-myPalette-300 border-2 border-myPalette-400 bg-transparent hover:bg-white rounded-full w-72 flex items-center justify-evenly py-1 my-4">
           <img src="./svg/google.svg" alt="" srcset="" class="w-6 h-6 ml-6">
-          <p class="flex-grow">Continue with Google</p>
+          <button class="flex-grow" @click="Google">Continue with Google</button>
         </button>
         <button class="hover:text-myPalette-300 border-2 border-myPalette-400 bg-transparent hover:bg-white rounded-full w-72 flex items-center justify-evenly py-1 mb-4">
           <img src="./svg/facebook.svg" alt="" srcset="" class="w-6 h-6 ml-6">
-          <p class="flex-grow">Continue with Facebook</p>
+          <button class="flex-grow" @click="Facebook">Continue with Facebook</button>
         </button>
         <div class="flex flex-col items-start w-72">
           <label for="email">Email:</label>
@@ -81,7 +77,9 @@ const Registro = {template: `
     ...Vuex.mapMutations(['Ahome']),
     ...Vuex.mapMutations(['Alogin']),
     ...Vuex.mapMutations(['logo']),
-    ...Vuex.mapMutations(['menu'])
+    ...Vuex.mapMutations(['menu']),
+    ...Vuex.mapMutations(['Google']),
+    ...Vuex.mapMutations(['Facebook'])
   }
 }
 
