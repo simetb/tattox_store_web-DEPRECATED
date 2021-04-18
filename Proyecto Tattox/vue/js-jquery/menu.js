@@ -6,15 +6,12 @@ function menu(){
         else{
             ele.addClass('fa-bars').removeClass('fa-times')
         }
-
         //animated with jQuery
 	    var navToggler = $(".nav-toggler") 
 	    var target = $(navToggler).data("target");
 	    $(target).animate({
 	    	height: "toggle",
 	    });
-	       
-
     }
 
 export {menu}

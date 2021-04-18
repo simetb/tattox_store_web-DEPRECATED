@@ -2,46 +2,51 @@
 const Login = {template: `
 <div>
 <!-- HEADER + NAVBAR -->
-<div class="flex flex-col h-screen bg-log_in_bg bg-cover bg-center text-myPalette-400">
-  <!-- NAVBAR OPEN -->
-  <nav class="flex flex-nowrap items-center h-20 md:h-24 lg:h-28 bg-myPalette-300 bg-opacity-80 py-0.5">
-	<div class="ml-5 w-12 ">
-	  <i id="burger" @click="menu" class="fas fa-bars hover:text-myPalette-100 cursor-pointer text-2xl block lg:hidden nav-toggler"  data-target="#menu"></i>
-	</div>
-	<div class="hidden mx-auto w-96 lg:flex justify-around content-center">
-	  
-	  <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">APPOINTMENT</p>
-	  <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">ARTISTS</p>
-	</div>
-	<a @click="Ahome" @mouseover="logo" id="logo" class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 mx-auto cursor-pointer bg-contain bg-no-repeat bg-center bg-logo"></a>
-	<div class="hidden mx-auto w-96 lg:flex justify-around pr-32 content-center">
-	  <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SHOP</p>
-	  <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SERVICES</p>
-	</div>
-	<div class="flex flex-row-reverse mr-5">
-	  <img src="" alt="" class="bg-myPalette-400 w-12 h-12 rounded-full">
-	</div>
-  </nav>
-  <div id="menu" class="hidden w-full flex-grow top-20 md:top-24 fixed">
-	<div class="w-full text-center divide-y-2 font-semibold">
-		<a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
-		  SERVICES
-		</a>
-		<a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
-		  APPOINTMENT
-		</a>
-		<a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
-		  ARTISTS
-		</a>
-		<a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
-		  SHOP
-		</a>
-		<a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
-		  SERVICES
-		</a>
-	</div>
-  </div>
-  <!-- NAVBAR CLOSE -->
+  <div class="flex flex-col h-screen bg-banner bg-cover bg-center text-myPalette-400">
+    <!-- NAVBAR OPEN -->
+    <nav class="flex flex-nowrap items-center h-20 md:h-24 lg:h-28 bg-myPalette-300 bg-opacity-80 py-0.5">
+      <div class="ml-5 w-16 lg:w-32 h-16 flex items-center">
+        <i id="burger" @click="menu" class="fas fa-bars hover:text-myPalette-100 cursor-pointer text-2xl block lg:hidden nav-toggler"  data-target="#menu"></i>
+      </div>
+      <div class="hidden mx-auto w-96 lg:flex justify-around content-center">
+        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SERVICES</p>
+        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">PORTFOLIOS</p>
+        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">ARTISTS</p>
+      </div>
+      <p @mouseover="logo" @click="Ahome" id="logo" class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 mx-auto cursor-pointer bg-contain bg-no-repeat bg-center bg-logo"></p>
+      <div class="hidden mx-auto w-96 lg:flex justify-around pr-32 content-center">
+        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">SHOP</p>
+        <p class="text-xl text-myPalette-400 hover:text-myPalette-100 cursor-pointer">CONTACT US</p>
+      </div>
+      <div class="flex flex-col mr-5 w-16 lg:w-32 h-20 items-center">
+        <button @click="Aregistro" class="hidden sm:block text-myPalette-400 hover:text-myPalette-100 bg-myPalette-100 hover:bg-myPalette-400 rounded w-full h-8 font-medium my-2">Sign up</button>
+        <p class="hidden sm:block cursor-pointer">Log in</p>
+      </div>
+    </nav>
+    <div id="menu" class="hidden w-full flex-grow top-20 md:top-24 fixed z-10">
+      <div class="w-full text-center divide-y-2 font-semibold">
+          <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
+            SERVICES
+          </a>
+          <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
+            PORTFOLIOS
+          </a>
+          <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
+            ARTISTS
+          </a>
+          <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
+            SHOP
+          </a>
+          <a href="#" class="block py-3 text-myPalette-400 bg-myPalette-300 hover:font-bold hover:bg-myPalette-100 hover:text-myPalette-300">
+            CONTACT US
+          </a>
+          <div class="flex sm:hidden justify-around py-3 text-myPalette-400 bg-myPalette-300 ">
+            <button class="bg-transparent hover:bg-myPalette-400 border-2 rounded p-2 w-1/3 text-myPalette-400 font-medium hover:text-myPalette-100 text-lg">Log in</button>
+            <button class="bg-myPalette-100 hover:bg-myPalette-400 rounded p-2 w-1/3 text-myPalette-400 font-medium hover:text-myPalette-100 text-lg">Sign up</button>
+          </div>
+      </div>
+    </div>
+    <!-- NAVBAR CLOSE -->
   <!-- FORM -->
   <div class="container mx-auto flex flex-col items-center justify-center text-center flex-grow">
 	<div class="bg-myPalette-300 bg-opacity-80 px-4 py-4 max-w-xs md:max-w-md lg:max-w-lg flex flex-col items-center justify-items-center">

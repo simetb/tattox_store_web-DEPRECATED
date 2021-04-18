@@ -1,6 +1,7 @@
+import {router} from './../router.js';
+/////////////////////////////////////////////////////////////////////////
 //FUNCION PARA INICIAR SERION EN FIREBASE
 function verifyLogin(){
-
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;    
 
@@ -8,7 +9,7 @@ function verifyLogin(){
     .then((user) => {
         
 
-        console.log("Ingreso exitoso!")
+        router.push("/home")
     
     })
     .catch((error) => {

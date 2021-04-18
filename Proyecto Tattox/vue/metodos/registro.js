@@ -6,17 +6,27 @@ function registro_conexion(){
 
     if (pass == pass2) {
         firebase.auth().createUserWithEmailAndPassword(email, pass)
-          .then((user) => {
-            console.log("se registro")
+          .then((userCredential) => {
+            var user = userCredential.user;
+            firebase.database().ref('usuarios/'+user.uid).set({
+              TipoUsuario: "basico",
+              Usuario: user.uid,
+            }
+            ,(error) => {
+              if (error) {
+                console.log(error)
+              }else{
+                console.log("Todo Bien")
+              }
+            });
           })
           .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
-            console.log("no se registro")
           });
 
     } else{
-        console.log("")
+        console.log("Contras diferentes")
     }
 
 }  
