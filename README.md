@@ -7,7 +7,6 @@ This Web - App was made with VUEJS 3.6.0, Tailwindss and Firebase
 Use a local host server and remember put your Firebase credentials 
 
 ```
-//CONFIGURACION DEL FIREBASE
 // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: APIKEY,
