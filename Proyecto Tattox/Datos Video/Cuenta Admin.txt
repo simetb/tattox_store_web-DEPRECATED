@@ -1,4 +1,0 @@
-ACCESO A CUENTA ADMIN:
-
-email: admin@admin.com
-contraseña: admin123

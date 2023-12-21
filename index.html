@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tattox</title>
+	<!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />   
+    
+    <!--ESTILOS FIREBASE-->
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+
+    <!--ESTILOS-->
+        <!--ICONOS-->
+    <link rel="stylesheet" href="./css/fontawesome/all.min.css">
+        <!--TAIL WIND-->
+    <link rel="stylesheet" href="./css/tailwind.css">
+        <!--ESTILOS CSS-->
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+
+	<div id="app">
+
+		 <router-view></router-view>
+
+          <!-- FOOTER -->
+  <div class="bg-myPalette-300 h-auto lg:h-screen flex flex-col">
+    <div class="container mx-auto flex-grow flex flex-wrap justify-around text-myPalette-400">
+      <div class="w-full h-32 md:h-40 bg-contain bg-no-repeat bg-center bg-logo my-8"></div>
+      <div class="text-left w-80 md:w-auto md:max-w-xs my-2">
+        <p class="text-xl md:text-2xl font-bold">STUDIO</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum quis laboriosam nulla eveniet, inventore non esse cumque architecto tenetur illo dolore excepturi nihil aliquid natus debitis blanditiis magni optio ducimus.</p>
+        <div class="mt-2">
+          <div class="flex items-center mb-1">
+            <i class="text-myPalette-100 mr-2 fas fa-map-marker-alt"></i> 
+            <p>Location</p>
+          </div>
+          <div class="flex items-center mb-1">
+            <i class="text-myPalette-100 mr-2 fas fa-map-marker-alt"></i> 
+            <p>Location</p>
+          </div>
+          <div class="flex items-center">
+            <i class="text-myPalette-100 mr-2 fas fa-map-marker-alt"></i> 
+            <p>Location</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-left w-80 md:max-w-xs my-2 block lg:flex lg:justify-center">
+        <div class="">
+          <p class="text-xl md:text-2xl font-bold">WORKING HOURS</p>
+          <p>Monday - Tuesday / Appointment</p>
+          <p>Wednesday - Friday / 12:00 - 9:00pm</p>
+          <p>Saturday / 12:00 - 6:00pm</p>
+          <p>Sunday / On God's day we don't work</p>
+        </div>
+      </div>
+      <div class="text-left w-80 md:max-w-xs my-2 block md:flex md:justify-center">
+        <div>
+          <p class="text-xl md:text-2xl font-bold">SOCIAL MEDIA</p>
+          <div>
+            <div class="flex items-center mb-1">
+              <i class="text-myPalette-100 mr-2 fab fa-facebook"></i> 
+              <p><a href="">Faceebook</a></p>
+            </div>
+            <div class="flex items-center">
+              <i class="text-myPalette-100 mr-2 fab fa-twitter"></i> 
+              <p><a href="">Twitter</a></p>
+            </div>
+            <div class="flex items-center mb-1">
+              <i class="text-myPalette-100 mr-2 fab fa-instagram"></i> 
+              <p><a href="">Instagram</a></p>
+            </div>
+            <div class="flex items-center mb-1">
+              <i class="text-myPalette-100 mr-2 fab fa-pinterest"></i> 
+              <p><a href="">Pinterest</a></p>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="w-full bg-myPalette-100 text-center font-semibold text-myPalette-300 py-2 mt-4">
+      <p>&copy; ALL RIGHTS RESERVED</p>
+    </div>
+  </div>
+	</div>
+
+
+	<!--INICIALIZACION DEL FIREBASE-->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase.js"></script>
+    <script src="firebase/FirebaseConfig.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script type="text/javascript">var storage = firebase.storage();</script>
+    <script type="text/javascript">var database = firebase.database();</script> 
+
+    <!--JQUERY-->
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    
+
+	<!--INICIALIZACION DEL SCRIPT VUE JS Y ROUTER-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/vuex@3.6.0/dist/vuex.js"></script>
+    <script type="module" src="vue/./app.js"></script>
+
+</body>
+</html>
